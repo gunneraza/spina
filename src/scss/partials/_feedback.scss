@@ -1,0 +1,134 @@
+.section__feedback {
+
+}
+
+.feedback__title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.2;
+  padding: 0 20px;
+
+  @media (max-width: 992px) {
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+
+  @media(max-width: 576px) {
+    font-size: 20px;
+    padding: 0px;
+  }
+}
+
+.form-group {
+  padding: 0px 100px;
+
+  @media (max-width: 1200px) {
+    padding: 0px 50px;
+  }
+
+  @media (max-width: 992px) {
+    padding: 0px 140px;
+  }
+
+  @media (max-width: 992px) {
+    padding: 0px;
+  }
+
+
+  .form-control {
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #ff9700;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+    }
+  }
+
+  .form-control_number {
+    position: relative;
+
+    input {
+      padding-left: 90px;
+      padding-right: 50px;
+    }
+  }
+
+  .form-control__flag {
+    width: 30px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    margin-top: -12px;
+
+    &:after {
+      content: '+998-';
+      margin-left: 34px;
+      color: #ccc;
+    }
+  }
+
+  .form-control__svg {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -10px;
+    border-left: 2px solid #ccc;
+    padding-left: 6px;
+
+    svg {
+      fill: #ccc;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.message {
+  font-size: 14px;
+  font-weight: 500;
+  transition: 300ms ease;
+}
+
+.error {
+  display: block;
+  color: red;
+  transform: scaleY(0);
+}
+
+.complete {
+  display: block;
+  color: green;
+  transform: scaleY(0);
+}
+
+.error.active {
+  transform: scaleY(1);
+}
+
+.complete.active {
+  transform: scaleY(1);
+}
